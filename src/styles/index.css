@@ -1,0 +1,24 @@
+:root {
+  --c-white: #fff;
+  --c-black: #000;
+  --c-orange: #ff9900;
+  --c-grey: #bcd0e5;
+  --f-base: 'Montserrat', sans-serif;
+  --fw-base: 400;
+  --fw-big: 600;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: var(--f-base);
+  font-weight: var(--fw-base);
+  color: var(--c-black);
+  background-color: var(--c-white);
+}
