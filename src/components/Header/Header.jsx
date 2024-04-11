@@ -1,24 +1,24 @@
-import '/src/styles/Header.css';
-import '/src/assets/Logo.svg';
+import '/Logo.svg';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="headerWrapper">
-        <img className="logo" src="/src/assets/Logo.svg" alt="Logo"></img>
+    <header className={styles.header}>
+      <div className={styles.wrapper}>
+        <img className={styles.logo} src="/Logo.svg" alt="logo" />
         <nav>
-          <ul className="navigationList">
-            <li className="navigationItem--orange">Product</li>
+          <ul className={styles.list}>
+            <li className={styles.orange}>Product</li>
             <li>Customers</li>
             <li>Pricing</li>
             <li>Resources</li>
           </ul>
         </nav>
-        <div className="buttonBox">
-          <button className="sign-in-button">
+        <div className={styles.buttons}>
+          <button type="button" className={`${styles.button} ${styles.white}`}>
             <span>Sign In</span>
           </button>
-          <button className="sign-up-button">
+          <button type="button" className={`${styles.button} ${styles.orange}`}>
             <span>Sign Up</span>
           </button>
         </div>
