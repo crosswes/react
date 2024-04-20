@@ -15,10 +15,14 @@
 ul {
   list-style: none;
 }
-
 body {
   font-family: var(--f-base);
   font-weight: var(--fw-base);
   color: var(--c-black);
   background-color: var(--c-white);
+}
+button {
+  font-weight: var(--fw-big);
+  padding: 15px 25px;
+  border-radius: 5px;
 }

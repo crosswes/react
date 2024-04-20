@@ -1,0 +1,10 @@
+.white {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-grey);
+  color: var(--c-black);
+}
+.orange {
+  background-color: var(--c-orange);
+  color: var(--c-white);
+  border: none;
+}

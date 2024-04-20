@@ -1,28 +1,28 @@
-import '/Logo.svg';
+// * Base
+import cn from 'classnames';
+
+// * Components
+import Wrapper from '../Wrapper/Wrapper';
+import Button from '../Button/Button';
+import Logo from '../Logo/Logo';
+import List from '../List/List';
+
+// * Styles
 import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.wrapper}>
-        <img className={styles.logo} src="/Logo.svg" alt="logo" />
+    <header className={cn([styles.header])}>
+      <Wrapper className={[styles.wrapper]}>
+        <Logo />
         <nav>
-          <ul className={styles.list}>
-            <li className={styles.orange}>Product</li>
-            <li>Customers</li>
-            <li>Pricing</li>
-            <li>Resources</li>
-          </ul>
+          <List />
         </nav>
-        <div className={styles.buttons}>
-          <button type="button" className={`${styles.button} ${styles.white}`}>
-            <span>Sign In</span>
-          </button>
-          <button type="button" className={`${styles.button} ${styles.orange}`}>
-            <span>Sign Up</span>
-          </button>
+        <div className={[styles.buttons]}>
+          <Button className='orange' text='Sign In' />
+          <Button className='white' text='Sign Up' />
         </div>
-      </div>
+      </Wrapper>
     </header>
   );
 };
