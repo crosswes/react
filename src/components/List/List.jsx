@@ -1,15 +1,17 @@
 // * Styles
-import styles from './List.module.css';
-import cn from 'classnames';
+import styles from "./List.module.css";
+import cn from "classnames";
 
 // * Components
-import { LIST } from './List.data.js';
+import { LIST } from "./List.data.js";
 
 // * Hooks
-import { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
+import { useEffect, useState, useCallback } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const List = () => {
+  // * Example of using axios and useEffect with callback
   // const [list, setList] = useState([]);
   // const [error, setError] = useState('');
 
@@ -51,6 +53,7 @@ const List = () => {
   //     </ul>
   //   );
   // }
+  // * End of example
 
   return (
     <ul className={cn([styles.list])}>
@@ -58,12 +61,13 @@ const List = () => {
       <Item title={title} body={body} key={`List item ${id}`} />) ) :(
       <p>The list is empty</p>) ] */}
       {LIST.map((item, index) => (
-        <li
-          key={item.id}
-          className={index === 0 ? styles.orange : styles[item.className]}
+        <Link
+          key={`navigation-item-${index}`}
+          to={item.to}
+          className={styles[item.className]}
         >
           {item.content}
-        </li>
+        </Link>
       ))}
     </ul>
   );

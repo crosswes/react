@@ -1,14 +1,20 @@
-import styles from '../Button/Button.module.css';
-import cn from 'classnames';
+import styles from "../Button/Button.module.css";
+import cn from "classnames";
 
 const Button = ({
-  text = 'Empty button',
+  text = "Empty button",
   className = [],
-  type = 'button',
+  type = "button",
   onClick,
+  disabled = false,
 }) => {
   return (
-    <button type={type} className={cn(styles[className])} onClick={onClick}>
+    <button
+      className={cn(styles[className])}
+      disabled={disabled}
+      onClick={onClick}
+      type={type}
+    >
       <span>{text}</span>
     </button>
   );

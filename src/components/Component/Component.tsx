@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type Props = {
   Title: string;
@@ -14,3 +14,6 @@ const component: React.FC<Props> = ({ Title }) => {
 };
 
 export default component;
+
+// * type RFC to create a functional component(new extention)
+// ! type rafce to create a react arrow function component(new extension)

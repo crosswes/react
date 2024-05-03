@@ -1,21 +1,20 @@
 const LIST = [
   {
-    id: 1,
-    content: 'Product',
-    className: 'orange',
-    // как мне можно было обыграть это так что бы не пришлось писать className={index === 0 ? styles.orange : styles[item.className]} а использовать className: 'orange'?
+    className: "orange",
+    content: "Main",
+    to: "/",
   },
   {
-    id: 2,
-    content: 'Customers',
+    content: "Counter",
+    to: "/counter",
   },
   {
-    id: 3,
-    content: 'Pricing',
+    content: "Form",
+    to: "/form",
   },
   {
-    id: 4,
-    content: 'Resources',
+    content: "Resources",
+    to: "/resources",
   },
 ];
 

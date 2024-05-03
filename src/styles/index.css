@@ -1,11 +1,17 @@
 :root {
-  --c-white: #fff;
-  --c-black: #000;
+  --f-base: "Montserrat", sans-serif;
   --c-orange: #ff9900;
-  --c-grey: #bcd0e5;
-  --f-base: 'Montserrat', sans-serif;
+  --c-lightblue: #bcd0e5;
+  --c-grey: #969696;
+  --c-blue: #007bff;
+  --c-light-grey: #e4e4e4;
+  --c-red: #ff0000;
+  --c-black: #000;
+  --c-white: #fff;
   --fw-base: 400;
   --fw-big: 600;
+  /* Trying to style radio inputs */
+  --form-control-color: rebeccapurple;
 }
 * {
   box-sizing: border-box;
@@ -16,13 +22,45 @@ ul {
   list-style: none;
 }
 body {
-  font-family: var(--f-base);
-  font-weight: var(--fw-base);
-  color: var(--c-black);
   background-color: var(--c-white);
+  font-weight: var(--fw-base);
+  font-family: var(--f-base);
+  color: var(--c-black);
 }
 button {
   font-weight: var(--fw-big);
   padding: 15px 25px;
   border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: var(--c-black);
+}
+input {
+  border: 1px solid var(--c-light-grey);
+  border-radius: 5px;
+  width: 100%;
+}
+select {
+  border: 1px solid var(--c-light-grey);
+  border-radius: 5px;
+  width: 100%;
+}
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }

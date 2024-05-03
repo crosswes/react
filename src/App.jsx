@@ -1,11 +1,18 @@
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+// * Hooks
+import { Outlet } from "react-router-dom";
+import { memo } from "react";
+
+// * Components
+import Header from "./components/Header/Header";
+
+// * Cached components
+const HeaderMemo = memo(Header);
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Main />
+      <HeaderMemo />
+      <Outlet />
     </>
   );
 };
