@@ -1,8 +1,8 @@
 // * Img
-import '../../../public/Logo.svg';
+import "../../../public/Logo.svg";
 
 // * Styles
-import styles from './Logo.module.css';
+import styles from "./Logo.module.css";
 
 const Logo = () => {
   return <img className={styles.logo} src='/Logo.svg' alt='logo' />;

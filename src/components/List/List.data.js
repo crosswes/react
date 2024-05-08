@@ -13,8 +13,8 @@ const LIST = [
     to: "/form",
   },
   {
-    content: "Resources",
-    to: "/resources",
+    content: "Pokemons",
+    to: "/pokemons",
   },
 ];
 

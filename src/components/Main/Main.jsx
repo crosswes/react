@@ -6,31 +6,37 @@ import cn from "classnames";
 import { useState, useEffect } from "react";
 
 // * Components
-import Button from "../Button/Button";
 import { getListData } from "../../helpers/get-list-data";
+import Wrapper from "../Wrapper/Wrapper";
+import Button from "../Button/Button";
+import Banner from "../Banner/Banner";
+import Logo from "../Logo/Logo";
 
 // * Icons
 // import Icon from "../Icon/Icon";
 
 const Main = () => {
-  // const [count, setCount] = useState(0);
-  // const handleIncrease = () => {
-  //   setCount((prevCount) => prevCount + 1);
-  // };
-  // const handleDecrease = () => {
-  //   setCount((prevCount) => prevCount - 1);
-  // };
-
-  useEffect(() => {
-    getListData();
-  }, []);
+  // useEffect(() => {
+  //   getListData();
+  // }, []);
 
   return (
     <>
-      {/* <Button text='Decrease' onClick={handleDecrease} />
-      <span className={cn([styles.counter])}>{count}</span>
-      <Button text='Increase' onClick={handleIncrease} /> */}
-
+      <Wrapper className={styles.wrapper}>
+        <section className='flex justify-between items-center'>
+          <div>
+            <h2 className='text-3xl font-bold'>
+              The Design Thinking superpowers
+            </h2>
+            <p className={cn([styles.text])}>
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <Button text='Get started' className={(styles.button, "orange")} />
+          </div>
+          <Banner />
+        </section>
+      </Wrapper>
       {/* 
       //* Example of adding icons
       <Icon icon='telegram' />

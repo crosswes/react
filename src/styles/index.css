@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --f-base: "Montserrat", sans-serif;
   --c-orange: #ff9900;
